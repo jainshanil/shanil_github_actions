@@ -10,11 +10,27 @@ jobs:
         - name: Checkout Repository
           uses: actions/checkout@v4
         
-        - name: Exceute shell script
+        - name: Exceute cowsay command
           run: |
-            chmod 755 ascii.sh
-            ./ascii.sh
+            sudo apt-get install cowsay
+            cowsay -f dragon "i am a dragon !!!" > dragon.txt
 
+    test-job:
+        runs-on: ubuntu-latest
+        steps:
 
+        - name: sleep
+          run: sleep 30
 
+        - name: test dragon
+          run: grep -i dragon dragon.txt
+        
+    deploy-job:
+        runs-on: ubuntu-latest
+        steps:
+        
+        - name: cat the file
+          run: cat dragon.txt
 
+        - name: Deploy
+          run: echo "Deploying !!!"
