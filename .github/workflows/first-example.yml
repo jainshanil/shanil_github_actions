@@ -1,0 +1,20 @@
+name: first-workflow
+
+on: push
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Welcome message
+          run: echo "welcome to frist Github actions job"
+         
+        - name: List files
+          run: ls
+        
+        - name: Read file
+          run: cat README.md 
+
+
+
+
