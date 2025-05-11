@@ -15,6 +15,13 @@ jobs:
             echo "welcome to frist Github actions job"
             ls -lta
             cat README.md
+        
+        - name: Exceute cowsay command
+          run: |
+            sudo apt-get intall cowsay
+            cowsay -f dragon "i am a dragon !!!" > dragon.txt
+            cat dragon.txt
+
 
 
 
