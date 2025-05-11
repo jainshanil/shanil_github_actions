@@ -1,0 +1,20 @@
+name: generate-ascii
+
+on: push
+
+jobs:
+    build-job:
+        runs-on: ubuntu-latest
+        steps:
+        
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+        
+        - name: Exceute shell script
+          run: |
+            chmod 755 ascii.sh
+            ./ascii.sh
+
+
+
+
