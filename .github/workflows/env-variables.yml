@@ -14,7 +14,7 @@ jobs:
           env: 
             password: jainsha
           run: |
-            echo "My username is $USERNAME"
+            echo "My username is ${{ env.USERNAME }}"
             echo "My password is $password"
 
     second-job:
