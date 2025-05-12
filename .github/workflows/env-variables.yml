@@ -25,8 +25,8 @@ jobs:
         steps:
         
         - name: Welcome message
-          env: 
-            password: abba_dabba_jabba
+          #env: 
+          #  password: abba_dabba_jabba
           run: |
-            echo "My username is $USERNAME"
-            echo "My password is $password"
+            echo "My username is ${{ vars.USERNAME }}"
+            echo "My password is ${{ secrets.password }}"
