@@ -1,6 +1,7 @@
 name: env-variables
-
 on: push
+env:
+    USERNAME: ltaanya
 
 jobs:
     first-job:
