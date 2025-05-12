@@ -1,0 +1,18 @@
+name: env-variables
+
+on: push
+
+jobs:
+    first-job:
+        env:
+            USERNAME: jainshanil
+        runs-on: ubuntu-latest
+        steps:
+        
+        - name: Welcome message
+          env: 
+            password: jainsha
+          run: |
+            echo "My username is $USERNAME"
+            echo "My password is $password"
+
