@@ -1,7 +1,7 @@
 name: env-variables
 on: push
-env:
-    USERNAME: ltaanya
+#env:
+#    USERNAME: ltaanya
 
 jobs:
     first-job:
@@ -14,8 +14,8 @@ jobs:
           env: 
             password: jainsha
           run: |
-            echo "My username is ${{ env.USERNAME }}"
-            echo "My password is $password"
+            echo "My username is ${{ vars.USERNAME }}"
+            echo "My password is ${{ secrets.password }}"
 
     second-job:
         needs: first-job
