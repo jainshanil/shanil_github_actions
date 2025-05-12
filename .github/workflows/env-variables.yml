@@ -5,8 +5,8 @@ env:
 
 jobs:
     first-job:
-        env:
-            USERNAME: jainshanil
+        #env:
+        #    USERNAME: jainshanil
         runs-on: ubuntu-latest
         steps:
         
@@ -19,14 +19,14 @@ jobs:
 
     second-job:
         needs: first-job
-        env:
-            USERNAME: jainshanil
+        #env:
+        #    USERNAME: jainshanil
         runs-on: ubuntu-latest
         steps:
         
         - name: Welcome message
           env: 
-            password: jainsha
+            password: abba_dabba_jabba
           run: |
             echo "My username is $USERNAME"
             echo "My password is $password"
