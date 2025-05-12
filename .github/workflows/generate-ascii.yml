@@ -13,7 +13,7 @@ jobs:
         - name: Exceute cowsay command
           run: |
             sudo apt-get install cowsay
-            cowsay -f horse "i am a horse !!!" > dragon.txt
+            cowsay -f cow "i am a horse !!!" > dragon.txt
 
         - name: Upload file
           uses: actions/upload-artifact@v4
